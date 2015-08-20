@@ -1,4 +1,3 @@
-
 package servlets;
 
 import java.io.IOException;
@@ -28,6 +27,11 @@ public class Controller extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
+//            out.println("<form name="loginForm" method="post" action="loginServlet">");
+//            out.println("Username: <input type="text" name="username"/> <br/>");
+//            out.println("Password: <input type="password" name="password"/> <br/>");
+//            out.println("<input type="submit" value="Login" />");
+//            out.println("</form>");
             out.println("<div>Bem Vindo!</div>");
             out.println("</body>");
             out.println("</html>");
