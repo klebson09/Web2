@@ -20,21 +20,33 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Servlet Servlet</title>");
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<div>Bem Vindo!!!!!!!</div>");
+//            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
+            
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
-//            out.println("<form name="loginForm" method="post" action="loginServlet">");
-//            out.println("Username: <input type="text" name="username"/> <br/>");
-//            out.println("Password: <input type="password" name="password"/> <br/>");
-//            out.println("<input type="submit" value="Login" />");
-//            out.println("</form>");
-            out.println("<div>Bem Vindo!</div>");
+            out.println("<FORM name=\"+\"loginForm\" ACTION=\"loginServlet\" METHOD=\"POST\">");
+            out.println("<INPUT TYPE=\"TEXT\" NAME=\"username\" VALUE=\"" + username  + "\"/>");
+            out.println("<INPUT TYPE=\"TEXT\" NAME=\"password\" VALUE=\"" + password + "\"/>");
+            out.println("<INPUT TYPE=\"SUBMIT\" >");
+            out.println("</FORM>");
             out.println("</body>");
             out.println("</html>");
+
+           out.print("seu usuario é " + username);
         }
     }
 
