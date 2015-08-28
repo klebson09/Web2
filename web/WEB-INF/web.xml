@@ -4,18 +4,38 @@
         <servlet-name>Controller</servlet-name>
         <servlet-class>servlets.Controller</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/controller.do</url-pattern>
     </servlet-mapping>
+    
+<!--    só foi modificar a ordem do mapeamento
+    1º tag <servlet> do servlet que recebe a request
+    2º tag <servlet-mapping> do servlet que recebe a request
+    
+    3º fiz o mesmo para o servlet ControllerResponse
+        seguindo a ordem
+        <servlet>
+        <servlet-mapping> ambos do ControllerResponse-->
+        
+    <servlet>
+        <servlet-name>ControllerResponse</servlet-name>
+        <servlet-class>servlets.ControllerResponse</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ControllerResponse</servlet-name>
+        <url-pattern>/ControllerResponse.do</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
-<welcome-file-list>
-<!--        <welcome-file>controller.do</welcome-file>-->
+    <welcome-file-list>
+        <!--        <welcome-file>controller.do</welcome-file>-->
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 </web-app>

@@ -31,14 +31,14 @@ public class Controller extends HttpServlet {
 //            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
 //            out.println("</body>");
 //            out.println("</html>");
-            
+            //obtem os dados do formulário (getParameter)
             String username = request.getParameter("username");
             String password = request.getParameter("password");
 
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<FORM name=\"+\"loginForm\" ACTION=\"loginServlet\" METHOD=\"POST\">");
+            out.println("<FORM name=\"+\"loginForm\" ACTION=\"Controller.do\" METHOD=\"POST\">");
             out.println("<INPUT TYPE=\"TEXT\" NAME=\"username\" VALUE=\"" + username  + "\"/>");
             out.println("<INPUT TYPE=\"TEXT\" NAME=\"password\" VALUE=\"" + password + "\"/>");
             out.println("<INPUT TYPE=\"SUBMIT\" >");
@@ -46,14 +46,14 @@ public class Controller extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
 
-           out.print("seu usuario é " + username);
+//           out.print("seu usuario é " + username);
         }
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        doGet(request, response);
-    }
+//    @Override
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        doGet(request, response);
+//    }
 
 }
